@@ -2,7 +2,8 @@
   "name": "suika-frontend",
   "version": "0.1.0",
   "private": false,
-  "author": "mari <hello@hakke.ro>",
+  "license": "MIT",
+  "author": "mari",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
