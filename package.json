@@ -1,0 +1,41 @@
+{
+  "name": "suika-frontend",
+  "version": "0.1.0",
+  "private": false,
+  "author": "mari <hello@hakke.ro>",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "lint:fix": "eslint src --fix && yarn format",
+    "format": "prettier --write src",
+    "codegen:generate": "openapi --input https://api.beer.hate.computer/openapi.json --exportCore false --exportServices false --output ./src/services/suika",
+    "codegen:fix": "prettier --write src/services/suika",
+    "codegen": "run-s codegen:generate codegen:fix"
+  },
+  "dependencies": {
+    "@chakra-ui/react": "^1.6.8",
+    "@emotion/cache": "^11.4.0",
+    "@emotion/react": "^11.4.1",
+    "@emotion/server": "^11.4.0",
+    "@emotion/styled": "^11.3.0",
+    "@fontsource/fira-mono": "^4.5.0",
+    "@fontsource/lexend": "^4.5.1",
+    "framer-motion": "^4.1.17",
+    "ky": "^0.28.5",
+    "next": "^11.1.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.24",
+    "eslint": "^7.32.0",
+    "eslint-config-next": "^11.1.2",
+    "npm-run-all": "^4.1.5",
+    "openapi-typescript-codegen": "^0.9.3",
+    "prettier": "^2.4.1",
+    "typescript": "^4.4.3"
+  }
+}
