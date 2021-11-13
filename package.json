@@ -11,7 +11,7 @@
     "lint": "next lint",
     "lint:fix": "eslint src --fix && yarn format",
     "format": "prettier --write src",
-    "codegen:generate": "openapi --input https://api.beer.hate.computer/openapi.json --exportCore false --exportServices false --output ./src/services/suika",
+    "codegen:generate": "openapi --input http://localhost:8000/openapi.json --exportCore false --exportServices false --output ./src/services/suika",
     "codegen:fix": "prettier --write src/services/suika",
     "codegen": "run-s codegen:generate codegen:fix"
   },
